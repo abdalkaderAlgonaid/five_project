@@ -10,10 +10,10 @@ class MyHomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
-          "welcom :" + name,
+          "Hi :" + name,
           style: TextStyle(color: Colors.white, fontSize: 25),
         ),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.cyan,
       ),
       body: Text("data", style: TextStyle(color: Colors.black, fontSize: 25)),
       drawer: Drawer(
@@ -23,7 +23,7 @@ class MyHomePage extends StatelessWidget {
             DrawerHeader(
                 margin: EdgeInsets.zero,
                 decoration: BoxDecoration(
-                  color: Colors.amber,
+                  color: Colors.cyan,
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,7 +41,7 @@ class MyHomePage extends StatelessWidget {
                     ),
                     Text(
                       "abdoalkader@gemail.com",
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(fontSize: 20),
                     )
                   ],
                 )),
@@ -52,7 +52,22 @@ class MyHomePage extends StatelessWidget {
                 buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
                 buildListTile(
                     context, "login", Icon(Icons.login), MyHomePage()),
-                buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
+                buildListTile(
+                    context, "home", Icon(Icons.account_circle), MyHomePage()),
+                buildListTile(context, "login", Icon(Icons.add), MyHomePage()),
+                buildListTile(
+                    context, "home", Icon(Icons.folder), MyHomePage()),
+                buildListTile(
+                    context, "login", Icon(Icons.saved_search), MyHomePage()),
+                buildListTile(context, "home", Icon(Icons.call), MyHomePage()),
+                buildListTile(context, "login", Icon(Icons.account_balance),
+                    MyHomePage()),
+                buildListTile(
+                    context, "home", Icon(Icons.add_circle), MyHomePage()),
+                buildListTile(
+                    context, "login", Icon(Icons.login), MyHomePage()),
+                buildListTile(context, "home", Icon(Icons.maps_ugc_outlined),
+                    MyHomePage()),
                 buildListTile(
                     context, "login", Icon(Icons.login), MyHomePage()),
                 buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
@@ -60,19 +75,7 @@ class MyHomePage extends StatelessWidget {
                     context, "login", Icon(Icons.login), MyHomePage()),
                 buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
                 buildListTile(
-                    context, "login", Icon(Icons.login), MyHomePage()),
-                buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
-                buildListTile(
-                    context, "login", Icon(Icons.login), MyHomePage()),
-                buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
-                buildListTile(
-                    context, "login", Icon(Icons.login), MyHomePage()),
-                buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
-                buildListTile(
-                    context, "login", Icon(Icons.login), MyHomePage()),
-                buildListTile(context, "home", Icon(Icons.home), MyHomePage()),
-                buildListTile(
-                    context, "login", Icon(Icons.login), MyHomePage()),
+                    context, "login", Icon(Icons.settings), MyHomePage()),
               ],
             ))
           ],
@@ -86,7 +89,8 @@ class MyHomePage extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 2.0),
       child: ListTile(
-        title: Text("ali"),
+        title: Text("abdalkader"),
+        subtitle: Text("algonaid"),
         tileColor: Colors.white,
         leading: icon,
         trailing: Icon(Icons.arrow_forward_ios),
@@ -94,13 +98,15 @@ class MyHomePage extends StatelessWidget {
           Navigator.pushAndRemoveUntil(
               context,
               MaterialPageRoute(
-                builder: (context) => login(),
+                builder: (context) => login("ahmde"),
               ),
               (route) => false);
 
-          //   MaterialPageRoute(
-          //    builder: (context) => MyHomePage,
+          //  MaterialPageRoute(
+          //builder: (context) => MyHomePage("ahmde"),
+
           //);
+          // (route) => false);
         },
       ),
     );
